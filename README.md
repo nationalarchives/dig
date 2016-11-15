@@ -1,5 +1,7 @@
 # Digital Interface for Government prototype
 
+Master branch [![Build Status](https://travis-ci.org/nationalarchives/dig.svg?branch=master)](https://travis-ci.org/nationalarchives/dig). Develop is [![Build Status](https://travis-ci.org/nationalarchives/dig.svg?branch=develop)](https://travis-ci.org/nationalarchives/dig)
+
 ## Purpose 
 
 Alpha version of standardised access point to Digital Records Infrastructure. Scope is validation and upload of born digital records.
