@@ -1,6 +1,4 @@
-# Digital Interface for Government prototype
-
-Master branch [![Build Status](https://travis-ci.org/nationalarchives/dig.svg?branch=master)](https://travis-ci.org/nationalarchives/dig). Develop is [![Build Status](https://travis-ci.org/nationalarchives/dig.svg?branch=develop)](https://travis-ci.org/nationalarchives/dig)
+# Digital Interface for Government prototype [![Build Status](https://travis-ci.org/nationalarchives/dig.svg?branch=master)](https://travis-ci.org/nationalarchives/dig) [![Build Status](https://travis-ci.org/nationalarchives/dig.svg?branch=develop)](https://travis-ci.org/nationalarchives/dig)
 
 ## Purpose 
 
