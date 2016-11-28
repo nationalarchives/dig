@@ -9,6 +9,7 @@ Alpha version of standardised access point to Digital Records Infrastructure. Sc
 This application uses: 
 
 * Composer for PHP dependency management
+* Bower for managing jQuery and Bootstrap as dependencies
 * PHPUnit for Unit Testing PHP
 
 ### Configuring development environment
@@ -16,6 +17,10 @@ This application uses:
 #### Composer dependency management
 
 Composer is used for dependency management, initially for PHPUnit but extending to other dependencies as needed. If you have previously installed Composer you will be able to install dependencies by typing ```composer install``` at the Terminal. If you have not installed Composer follow the 'Installing Composer' steps shown in the [tna-base](https://github.com/nationalarchives/tna-base/) repository.
+
+#### Bower dependency management
+
+Bower manages jQuery and Bootstrap dependencies. Installation of Bower is therefore necessary. Having installed Bower you can install dependencies with ```bower install```
 
 ### PHPUnit
 
