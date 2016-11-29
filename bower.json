@@ -1,5 +1,17 @@
 {
-  "dependencies": {
-    "bootstrap": "^3.3.7"
+  "name": "dig",
+  "homepage": "https://github.com/nationalarchives/dig",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "boostrap#^3.3.7"
   }
 }
