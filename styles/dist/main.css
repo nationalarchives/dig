@@ -115,6 +115,19 @@ body {
   border-radius: 50%;
 }
 
+.notification-panel .message::after {
+  content: ' ';
+  background-color: #fcff2a;
+  border: 1px solid black;
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  position: absolute;
+  right: -0.35em;
+  top: -0.3em;
+  border-radius: 50%;
+}
+
 .sidebar {
   top: 25px;
 }
