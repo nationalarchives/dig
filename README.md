@@ -11,6 +11,7 @@ This application uses:
 * Composer for PHP dependency management
 * Bower for managing jQuery and Bootstrap as dependencies
 * PHPUnit for Unit Testing PHP
+* Grunt for task automation
 
 ### Configuring development environment
 
@@ -21,6 +22,15 @@ Composer is used for dependency management, initially for PHPUnit but extending 
 #### Bower dependency management
 
 Bower manages jQuery and Bootstrap dependencies. Installation of Bower is therefore necessary. Having installed Bower you can install dependencies with ```bower install```
+
+#### Grunt
+
+Bower is used for task automation, including: 
+
+* compiling SASS to CSS
+* running a 'watch' task on `.scss` files
+
+If you have previously installed the `grunt-cli` you will be able to install the required packages with `npm install grunt` and then initiate the watch task with `grunt watch`.
 
 ### PHPUnit
 
