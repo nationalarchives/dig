@@ -1,3 +1,4 @@
+<?php require_once('functions.php') ?>
 <html lang="en">
 <head>
 
@@ -9,8 +10,8 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
-    <!-- Custom styles for this template -->
-    <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
+    <!-- Custom styles for the prototype -->
+    <link href="styles/dist/main.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

@@ -1,0 +1,16 @@
+@import "variables";
+
+.notification-panel {
+  .message::after {
+    content: ' ';
+    background-color: $notification-yellow;
+    border: 1px solid black;
+    display: inline-block;
+    width: 0.7em;
+    height: 0.7em;
+    position: absolute;
+    right: -0.35em;
+    top: -0.3em;
+    border-radius: 50%;
+  }
+}

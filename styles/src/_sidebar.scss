@@ -1,0 +1,63 @@
+@import "variables";
+
+.sidebar {
+  top: 25px;
+}
+
+.department-identifier {
+  background: url("/images/home-office-crest.png") no-repeat $padding-unit * 1.5 0;
+  background-size: auto 50px;
+  border-left: 3px solid $home-office-colour;
+  position: relative;
+  left: -$padding-unit;
+
+  h2 {
+    padding-top: $padding-unit * 5.5;
+    padding-bottom: $padding-unit-small;
+    padding-left: $padding-unit;
+    font-size: 1.5em;
+  }
+}
+
+.search-form {
+  margin-right: -21px;
+  margin-bottom: 20px;
+  margin-left: -20px;
+  border-top: 1px solid $light-grey;
+  background-color: $light-grey;
+  padding: $padding-unit-large;
+
+  input, button {
+    border-radius: 0;
+  }
+
+  .btn {
+    padding: 9px;
+  }
+}
+
+#guidance {
+  background-color: $light-grey;
+  padding: $padding-unit-large $padding-unit-large $padding-unit-large 0;
+  max-height: 440px;
+  overflow: scroll;
+
+  > ul {
+    > li {
+      list-style: none;
+      margin: 0;
+    }
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: $padding-unit-small;
+  }
+}
+
+.nav-sidebar > .active > a {
+  background-color: $dark-grey;
+}
