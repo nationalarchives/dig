@@ -182,4 +182,8 @@ body {
   background-color: #343434;
 }
 
+.panel-body .glyphicon {
+  font-size: 3em;
+}
+
 /*# sourceMappingURL=main.css.map */
