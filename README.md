@@ -11,6 +11,7 @@ This application uses:
 * Composer for PHP dependency management
 * Bower for managing jQuery and Bootstrap as dependencies
 * PHPUnit for Unit Testing PHP
+* Twig for PHP Templating
 * Grunt for task automation
 
 ### Configuring development environment

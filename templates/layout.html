@@ -1,0 +1,42 @@
+<html lang="en">
+{% block head %}
+<head>
+
+    <?php require_once('includes/meta.php'); ?>
+
+    <title>{{ page_title }} | {{ app_name }}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Custom styles for the prototype -->
+    <link href="styles/dist/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+{% endblock %}
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        {% include 'logo-and-notification-panel.html' %}
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        {% include 'sidebar.html' %}
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
