@@ -1,15 +1,15 @@
 <?php
 
+use \Psr\Http\Message\ServerRequestInterface as Request;
+use \Psr\Http\Message\ResponseInterface as Response;
+
 require_once 'vendor/autoload.php';
 
-$loader = new Twig_Loader_Filesystem('templates');
+$app = new \Slim\App;
 
-$twig = new Twig_Environment($loader, array());
+require __DIR__ . '/src/twig-component-registration.php';
 
-$template = $twig->load('aggregate-transfers.html');
+require __DIR__ . '/src/routes.php';
 
-echo $template->render([
-    'app_name' => 'Digital Interface for Government',
-    'department_name' => 'Home Office',
-    'page_title' => 'Dashboard'
-]);
+// Run app
+$app->run();
