@@ -9,9 +9,9 @@ Alpha version of standardised access point to Digital Records Infrastructure. Sc
 This application uses: 
 
 * Composer for PHP dependency management
+* The Slim PHP micro-framework for routing and templating (via the slim/twig component) 
 * Bower for managing jQuery and Bootstrap as dependencies
 * PHPUnit for Unit Testing PHP
-* Twig for PHP Templating
 * Grunt for task automation
 
 ### Configuring development environment
@@ -38,3 +38,7 @@ If you have previously installed the `grunt-cli` you will be able to install the
 Having followed the steps under 'Installing Composer' type ```vendor/bin/phpunit -c phpunit.xml``` from within the ```tna-base``` directory to run Unit Tests for the project.
 
 Note: PhpStorm allows for PHPUnit integration - allowing your tests to be run automatically. Search the JetBrains website to find out how to configure this.
+
+## Running the application locally
+
+To run the application locally using the PHP development server type `php -S localhost:8000` at the command line from the project root and visit localhost:8000 from a web browser.

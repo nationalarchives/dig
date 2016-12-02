@@ -1,6 +1,7 @@
 {
     "require": {
-        "phpunit/phpunit": "^4.8",
-        "twig/twig": "^1.28"
+        "slim/slim": "^3.0",
+        "slim/twig-view": "^2.1",
+        "phpunit/phpunit": "^5.7"
     }
 }
