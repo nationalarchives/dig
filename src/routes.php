@@ -11,7 +11,7 @@ $app->get('/', function ($request, $response, $args) {
     $page_info = $page->getPageInfo();
 
     return $this->view->render($response, 'aggregate-transfers.html', $page_info);
-})->setName('profile');
+})->setName('transfer-list');
 
 $app->get('/transfer', function ($request, $response, $args) {
 
