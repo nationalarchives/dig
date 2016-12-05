@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %} app_name {% endblock %}
+
+{% block content %}
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="row">
+        <div class="well text-center">
+            <h4>{{transfer_name}}Transfer name</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Schema for Transfer</div>
+            <div class="panel-body">The agreed schema for this tranfer is viewable <u><a href="#">here</a></u></div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Select metadata for transfer</div>
+            <div class="panel-body">
+                <div class="input-group">
+                    <input data-show-preview="true" type="file" class="form-control" placeholder="Upload CSV">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Upload</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
