@@ -1,11 +1,14 @@
 <?php
 
+require __DIR__ . '/Page.php';
+
 // Note:    this patten has dependency on Twig component registration
 
 $app->get('/', function ($request, $response, $args) {
-    return $this->view->render($response, 'aggregate-transfers.html', [
-        'app_name' => 'Digital Interface for Government',
-        'department_name' => 'Home Office',
-        'page_title' => 'Dashboard'
-    ]);
+
+    // Instantiate Page object
+    $page = new \tna\Page();
+    $page_info = $page->getPageInfo();
+
+    return $this->view->render($response, 'aggregate-transfers.html', $page_info);
 })->setName('profile');
