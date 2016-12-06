@@ -28,5 +28,14 @@ $app->post('/transfer', function ($request, $response, $args) {
 	$page = new \tna\Page();
 	$page_info = $page->getPageInfo();
 	$page_info['flash_message'] = 'Metadata uploaded successfully!';
-	return $this->view->render($response, 'success.html', $page_info);
-})->setName('success');
+	$upload = $_POST['upload'];
+	$page_info['message_class'] = 'success';
+	if (!empty($upload)) {
+		return $this->view->render($response, 'message.html', $page_info);
+	}
+	if(empty($upload)) {
+		$page_info['flash_message'] = 'Metadata empty';
+		$page_info['message_class'] = 'danger';
+		return $this->view->render($response, 'message.html', $page_info);
+	}
+})->setName('message');
