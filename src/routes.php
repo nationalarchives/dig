@@ -21,3 +21,12 @@ $app->get('/transfer', function ($request, $response, $args) {
 
 	return $this->view->render($response, 'transfer-details.html', $page_info);
 })->setName('detail');
+
+$app->post('/transfer', function ($request, $response, $args) {
+
+	// Instantiate Page object
+	$page = new \tna\Page();
+	$page_info = $page->getPageInfo();
+	$page_info['flash_message'] = 'Metadata uploaded successfully!';
+	return $this->view->render($response, 'success.html', $page_info);
+})->setName('success');
