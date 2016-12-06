@@ -11,11 +11,12 @@ class Page
     private $page_info = [
         'app_name' => 'Digital Interface for Government',
         'department_name' => 'Home Office',
-        'page_title' => 'Dashboard'
+        'page_title' => 'Dashboard',
+	    'flash_message' => false
     ];
 
     /**
-     * @return string
+     * @return array
      */
     public function getPageInfo()
     {

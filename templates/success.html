@@ -1,12 +1,8 @@
-{% extends "layout.html" %}
-
-{% block title %} app_name {% endblock %}
-
-{% block content %}
-    <div class="row">
-        <div class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
-            <strong>Success!</strong> The CSV metadata has been uploaded successfully
-        </div>
-    </div>
+{% extends 'transfer-details.html' %}
+{% block flash_message %}
+<div class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+     {{ flash_message }}
+</div>
 {% endblock %}
+
