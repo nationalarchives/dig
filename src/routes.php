@@ -20,7 +20,7 @@ $app->get('/transfer', function ($request, $response, $args) {
 	$page_info = $page->getPageInfo();
 
 	return $this->view->render($response, 'transfer-details.html', $page_info);
-})->setName('detail');
+})->setName('summary');
 
 $app->post('/transfer', function ($request, $response, $args) {
 
@@ -31,6 +31,7 @@ $app->post('/transfer', function ($request, $response, $args) {
 	$upload = $_POST['upload'];
 	$page_info['message_class'] = 'success';
 	if (!empty($upload)) {
+	    $page_info['show_summary'] = true;
 		return $this->view->render($response, 'message.html', $page_info);
 	}
 	if(empty($upload)) {
