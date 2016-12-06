@@ -2,8 +2,6 @@
 {% block head %}
 <head>
 
-    <?php require_once('includes/meta.php'); ?>
-
     <title>{{ page_title }} | {{ app_name }}</title>
 
     <!-- Bootstrap core CSS -->
@@ -24,13 +22,13 @@
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
-        {% include 'logo-and-notification-panel.html' %}
+        {% include 'logo-and-notification-panel.html.twig' %}
     </div>
 </nav>
 
 <div class="container-fluid">
     <div class="row">
-        {% include 'sidebar.html' %}
+        {% include 'sidebar.html.twig' %}
         {% block content %}{% endblock %}
     </div>
 </div>
