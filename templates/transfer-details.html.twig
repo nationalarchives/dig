@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.html.twig" %}
 
 {% block title %} app_name {% endblock %}
 
@@ -31,7 +31,7 @@
             </div>
         </form>
         {% if show_summary %}
-        {{ include('transfer-summary.html') }}
+        {{ include('transfer-summary.html.twig') }}
         {% endif %}
     </div>
 </div>

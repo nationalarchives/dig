@@ -9,7 +9,7 @@ $app->get('/', function ($request, $response, $args) {
     $page = new \tna\Page();
     $page_info = $page->getPageInfo();
 
-    return $this->view->render($response, 'aggregate-transfers.html', $page_info);
+    return $this->view->render($response, 'aggregate-transfers.html.twig', $page_info);
 })->setName('transfer-list');
 
 $app->get('/transfer', function ($request, $response, $args) {
@@ -17,7 +17,7 @@ $app->get('/transfer', function ($request, $response, $args) {
     $page = new \tna\Page();
     $page_info = $page->getPageInfo();
 
-    return $this->view->render($response, 'transfer-details.html', $page_info);
+    return $this->view->render($response, 'transfer-details.html.twig', $page_info);
 })->setName('summary');
 
 $app->post('/transfer', function ($request, $response, $args) {
@@ -26,7 +26,7 @@ $app->post('/transfer', function ($request, $response, $args) {
     $page = new \tna\Page();
     $page_info = $page->getPageInfo();
 
-    return $this->view->render($response, 'message.html', $page_info);
+    return $this->view->render($response, 'message.html.twig', $page_info);
 
 })->setName('message');
 
@@ -47,5 +47,5 @@ $app->post('/metadata-upload', function ($request, $response, $args) {
         $page_info['message_class'] = 'danger';
     }
 
-    return $this->view->render($response, 'message.html', $page_info);
+    return $this->view->render($response, 'message.html.twig', $page_info);
 })->setName('metadata-upload');
