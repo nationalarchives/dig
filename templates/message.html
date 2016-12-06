@@ -1,6 +1,6 @@
 {% extends 'transfer-details.html' %}
 {% block flash_message %}
-<div class="alert alert-success fade in alert-dismissable" style="margin-top:18px;">
+<div class="alert alert-{{ message_class }} fade in alert-dismissable" style="margin-top:18px;">
     <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
      {{ flash_message }}
 </div>
