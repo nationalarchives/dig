@@ -15,7 +15,16 @@ class PageTest extends PHPUnit_Framework_TestCase
         $page = new tna\Page();
         $this->assertObjectHasAttribute('page_info', $page, '$page object has page_info attribute');
 
-        foreach (['app_name', 'department_name', 'page_title'] as $i) {
+        $expected_keys = [
+            'app_name',
+            'department_name',
+            'page_title',
+            'flash_message',
+            'flash_message_class',
+            'show_summary'
+        ];
+
+        foreach ($expected_keys as $i) {
             $this->assertArrayHasKey($i, $page->getPageInfo(), sprintf('$page->getPageInfo() returns an array with an %s attribute', $i));
         }
 

@@ -12,7 +12,9 @@ class Page
         'app_name' => 'Digital Interface for Government',
         'department_name' => 'Home Office',
         'page_title' => 'Dashboard',
-	    'flash_message' => false
+	    'flash_message' => false,
+        'flash_message_class' => false,
+        'show_summary' => false
     ];
 
     /**
