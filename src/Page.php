@@ -4,23 +4,33 @@ namespace tna;
 
 class Page
 {
+    public $app_name = 'Digital Interface for Government';
+    public $department_name = 'Home Office';
+    public $page_title = '';
+    public $flash_message = '';
+    public $flash_message_class = '';
+    public $show_summary = false;
 
     /**
-     * @var array representing data at the application level
+     * Page constructor.
+     * @param array $config
      */
-    private $page_info = [
-        'app_name' => 'Digital Interface for Government',
-        'department_name' => 'Home Office',
-        'page_title' => 'Dashboard',
-	    'flash_message' => false
-    ];
+    public function __construct(array $config = [])
+    {
+        $reflection = new \ReflectionClass($this);
 
-    /**
-     * @return array
-     */
+        foreach ($config as $property => $value) {
+            $property = $reflection->getProperty($property);
+
+            if ($property instanceof \ReflectionProperty) {
+                $property->setValue($this, $value);
+            }
+        }
+    }
+
     public function getPageInfo()
     {
-        return $this->page_info;
+        return get_object_vars($this);
     }
 
 }
