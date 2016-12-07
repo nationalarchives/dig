@@ -30,7 +30,10 @@ class Page
 
     public function getPageInfo()
     {
-        return get_object_vars($this);
+        $properties_as_array = get_object_vars($this);
+        $properties_as_array['properties_as_json'] = json_encode($properties_as_array);
+
+        return $properties_as_array;
     }
 
 }

@@ -49,5 +49,4 @@ class PageTest extends PHPUnit_Framework_TestCase
             $this->assertArrayHasKey($key, $page->getPageInfo(), sprintf('$page->getPageInfo() returns an array with an %s attribute', $key));
         }
     }
-
 }
