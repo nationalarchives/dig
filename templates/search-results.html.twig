@@ -1,0 +1,77 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} app_name {% endblock %}
+
+{% block content %}
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h1 class="page-header">{{ department_name }} Records</h1>
+        <h2>Search results</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Search results filters</div>
+                    <div class="panel-body">
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked="true">Filter by WordDoc</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Filter by Pdf</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Filter by JPG</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Filter by Excel</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Filter by others</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="list-group">
+                    <a href="#" class="list-group-item">
+                      <h3>Record name</h3>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h3>Record name</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h3>Record name</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h3>Record name</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h3>Record name</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </a>
+                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+{% endblock %}
