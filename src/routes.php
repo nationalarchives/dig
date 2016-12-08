@@ -44,3 +44,10 @@ $app->post('/metadata-upload', function ($request, $response, $args) {
 
     return $this->view->render($response, 'message.html.twig', $page->getPageInfo());
 })->setName('metadata-upload');
+
+$app->get('/search-results', function ($request, $response, $args) {
+
+	$page = new \tna\Page();
+
+	return $this->view->render($response, 'search-results.html.twig', $page->getPageInfo());
+})->setName('search-results');
