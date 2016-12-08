@@ -31,7 +31,7 @@ $app->post('/metadata-upload', function ($request, $response, $args) {
 
     if (!empty($request->getParam('upload'))) {
         $page = new \tna\Page([
-            'flash_message' => 'Metadata uploaded successfully',
+            'flash_message' => 'Metadata uploaded successfully. <a href="/begin-transfer">View recommended transfer options</a>',
             'flash_message_class' => 'success',
             'show_summary' => true
         ]);
@@ -51,3 +51,13 @@ $app->get('/search-results', function ($request, $response, $args) {
 
 	return $this->view->render($response, 'search-results.html.twig', $page->getPageInfo());
 })->setName('search-results');
+
+$app->get('/begin-transfer', function($request, $response, $args) {
+
+    $page = new \tna\Page([
+        'show_summary' => true,
+        'begin_transfer' => true
+    ]);
+
+    return $this->view->render($response, 'transfer-details.html.twig', $page->getPageInfo());
+});

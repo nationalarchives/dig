@@ -2,6 +2,6 @@
 {% block flash_message %}
 <div class="alert alert-{{ flash_message_class }} fade in alert-dismissable" style="margin-top:18px;">
     <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
-     {{ flash_message }}
+     {{ flash_message | raw }}
 </div>
 {% endblock %}
