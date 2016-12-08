@@ -61,3 +61,13 @@ $app->get('/begin-transfer', function($request, $response, $args) {
 
     return $this->view->render($response, 'transfer-details.html.twig', $page->getPageInfo());
 });
+
+$app->get('/record-preview', function($request, $response, $args) {
+
+	$page = new \tna\Page([
+		'show_summary' => true,
+		'begin_transfer' => true
+	]);
+
+	return $this->view->render($response, 'record-preview.html.twig', $page->getPageInfo());
+});

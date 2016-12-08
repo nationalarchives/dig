@@ -1,0 +1,49 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} app_name {% endblock %}
+
+{% block content %}
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h1 class="page-header">{{ department_name }} Records</h1>
+        <h2>Record item</h2>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                {#This record is available to order and view.#}
+                {#<span class="label label-success">Open</span>#}
+                <h4>This record is available to order and view. <span class="label label-success pull-right">Open</span></h4>
+            </div>
+        </div>
+        <table class="table table-condensed table-hover">
+            <tbody>
+            <tr>
+                <td>Reference:</td>
+                <td>CP8899</td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</td>
+            </tr>
+            <tr>
+                <td>Date:</td>
+                <td>12/05/1938 to 09/10/1968</td>
+            </tr>
+            <tr>
+                <td>Held by:</td>
+                <td>John Doe</td>
+            </tr>
+            <tr>
+                <td>Legal status:</td>
+                <td>Legal</td>
+            </tr>
+            <tr>
+                <td>Closure status:</td>
+                <td>Unclosed</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="panel panel-default">
+            <div class="panel-heading">Context of this record</div>
+            <div class="panel-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+        </div>
+    </div>
+{% endblock %}
