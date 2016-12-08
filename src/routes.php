@@ -27,6 +27,15 @@ $app->post('/transfer', function ($request, $response, $args) {
 
 })->setName('message');
 
+$app->get('/register-collection', function ($request, $response, $args) {
+
+    // Instantiate Page object
+    $page = new \tna\Page();
+
+    return $this->view->render($response, 'register-collection.html.twig', $page->getPageInfo());
+
+})->setName('message');
+
 $app->post('/metadata-upload', function ($request, $response, $args) {
 
     if (!empty($request->getParam('upload'))) {
