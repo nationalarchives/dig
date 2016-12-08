@@ -17,6 +17,7 @@ class PageTest extends PHPUnit_Framework_TestCase
         $this->assertObjectHasAttribute('department_name', $page, '$page object has department_name attribute');
         $this->assertObjectHasAttribute('page_title', $page, '$page object has page_title attribute');
         $this->assertObjectHasAttribute('show_summary', $page, '$page object has show_summary attribute');
+        $this->assertObjectHasAttribute('begin_transfer', $page, '$page object has begin_transfer attribute');
     }
 
     public function testConstructorSetsAttributes()

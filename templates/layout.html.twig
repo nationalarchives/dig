@@ -28,7 +28,9 @@
 <div class="container-fluid">
     <div class="row">
         {% include 'sidebar.html.twig' %}
-        {% block content %}{% endblock %}
+        <main>
+            {% block content %}{% endblock %}
+        </main>
     </div>
 </div>
 

@@ -10,6 +10,7 @@ class Page
     public $flash_message = '';
     public $flash_message_class = '';
     public $show_summary = false;
+    public $begin_transfer = false;
 
     /**
      * Page constructor.
