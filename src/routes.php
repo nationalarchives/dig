@@ -77,3 +77,13 @@ $app->get('/request-hard-drive', function($request, $response, $arg) {
 
     return $this->view->render($response, 'request-hard-drive.html.twig', $page->getPageInfo());
 });
+
+$app->get('/record-preview', function($request, $response, $args) {
+
+	$page = new \tna\Page([
+		'show_summary' => true,
+		'begin_transfer' => true
+	]);
+
+	return $this->view->render($response, 'record-preview.html.twig', $page->getPageInfo());
+});
