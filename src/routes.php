@@ -70,3 +70,10 @@ $app->get('/begin-transfer', function($request, $response, $args) {
 
     return $this->view->render($response, 'transfer-details.html.twig', $page->getPageInfo());
 });
+
+$app->get('/request-hard-drive', function($request, $response, $arg) {
+
+    $page = new \tna\Page();
+
+    return $this->view->render($response, 'request-hard-drive.html.twig', $page->getPageInfo());
+});

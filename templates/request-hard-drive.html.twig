@@ -19,18 +19,30 @@
 {% endblock %}
 
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        {% include 'logo-and-notification-panel.html.twig' %}
-    </div>
-</nav>
 
 <div class="container-fluid">
     <div class="row">
-        {% include 'sidebar.html.twig' %}
-        <main>
-            {% block content %}{% endblock %}
-        </main>
+        <div tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">User requests Hard Disk Drive (HDD)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Process here would be:</p>
+                        <ul>
+                            <li>This system is used to trigger a HDD request to DRI</li>
+                            <li>DRI receive request and prepare HDD</li>
+                            <li>DRI dispatch HDD and update system</li>
+                            <li>System sends notification of dispatch to user</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="/begin-transfer" type="button" class="btn btn-default">Return to previous step</a>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     </div>
 </div>
 
