@@ -1,0 +1,108 @@
+{% extends "layout.html.twig" %}
+
+{% block title %} app_name {% endblock %}
+
+{% block content %}
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="row">
+            <h1>Collection registration</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci atque autem commodi consequuntur
+                dolor, doloribus eveniet excepturi harum illo iusto, minus mollitia nesciunt, odit recusandae reiciendis
+                suscipit tempora vel</p>
+            <form>
+                <div class="form-group">
+                    <label for="collection-id">Collection identifier</label>
+                    <input type="text" class="form-control" id="collection-id" placeholder="Collection identifier"
+                           value="COMPH">
+                </div>
+                <div class="form-group">
+                    <label for="collection-type">Collection type</label>
+                    <select class="form-control" id="collection-type">
+                        <option>Born digital</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="preservica-tag">Security tag in Preservica</label>
+                    <input type="text" class="form-control" id="preservica-tag" placeholder="Security tag"
+                           value="BornDigital">
+                </div>
+                <div class="form-group">
+                    <label for="creating-body">Creating body</label>
+                    <input type="text" class="form-control" id="creating-body" placeholder="Creating body"
+                           value="Board_of_Trade,_Companies_Registration_Office">
+                </div>
+                <div class="form-group">
+                    <label for="transferring-body">Transferring body</label>
+                    <input type="text" class="form-control" id="transferring-body" placeholder="Transferring body"
+                           value="Companies_House">
+                </div>
+                <div class="form-group">
+                    <label for="collection_description">Collection description</label>
+                    <input type="text" class="form-control" id="collection_description"
+                           placeholder="Collection description"
+                           value="Board of Trade: Companies Registration Office: Files of Dissolved Companies">
+                </div>
+                <div class="form-group">
+                    <label for="batch-identifier">Batch identifier</label>
+                    <input type="text" class="form-control" id="batch-identifier" placeholder="Batch identifier"
+                           value="BT95Y15FB001">
+                </div>
+                <div class="form-group">
+                    <label for="series-identifier">Series identifier</label>
+                    <input type="text" class="form-control" id="series-identifier" placeholder="Series identifier"
+                           value="BT95">
+                </div>
+                <div class="form-group">
+                    <label for="transfer-identifier">Transfer identifier</label>
+                    <input type="text" class="form-control" id="transfer-identifier" placeholder="Transfer identifier"
+                           value="COMPHY15">
+                </div>
+                <div class="form-group">
+                    <label for="deliverable-as-unit">File deliverable as unit</label>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Yes
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> No
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="metadata-schema">Metadata schema</label><br>
+                    <button id="metadata-schema" class="btn btn-default">metadata_v13_ BT95Y15FB000.csvs</button>
+                </div>
+                <div class="form-group">
+                    <label for="closure-schema">Closure schema</label><br>
+                    <button id="closure-schema" class="btn btn-default">closure_v3.csvs</button>
+
+                </div>
+                <div class="form-group">
+                    <label for="filepath-in-identifier">Filepath in CSV metadata</label>
+                    <input type="text" class="form-control" id="filepath-in-identifier" placeholder="Filepath in CSV metadata"
+                           value="file:///T:/WORK/BT95Y15FB001/BT_95/">
+                </div>
+                <div class="form-group">
+                    <label for="whitelist-addition">Whitelist addition</label>
+                    <input type="text" class="form-control" id="whitelist-addition" placeholder="Whitelist addition"
+                           value="x-fmt:280">
+                </div>
+                <div class="form-group">
+                    <label for="file-exceptions">File exceptions</label>
+                    <input type="text" class="form-control" id="file-exceptions" placeholder="File exceptions"
+                           value="No exceptions">
+                </div>
+                <div class="form-group">
+                    <label for="discovery-parent-id">Discovery parent ID</label>
+                    <input type="text" class="form-control" id="discovery-parent-id" placeholder="Discovery parent ID"
+                           value="C15626553">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+
+        </div>
+    </div>
+{% endblock %}
