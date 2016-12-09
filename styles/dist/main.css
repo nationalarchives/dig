@@ -213,25 +213,25 @@ a:hover .panel-body {
   font-size: 3em;
 }
 
-form#dragDrop {
+#dragDrop {
   width: 100%;
   height: 281px;
   border: 2px dashed #ddd;
 }
-form#dragDrop p {
+#dragDrop p {
   width: 100%;
   text-align: center;
   line-height: 170px;
   color: #9d9d9d;
 }
-form#dragDrop span.glyphicon {
+#dragDrop span.glyphicon {
   text-align: center;
   font-size: 6em;
   color: #9d9d9d;
   width: 100%;
   top: .5em;
 }
-form#dragDrop input {
+#dragDrop input {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -240,7 +240,7 @@ form#dragDrop input {
   outline: none;
   opacity: 0;
 }
-form#dragDrop button {
+#dragDrop button {
   margin: 0;
   color: #fff;
   background: #999999;
@@ -252,11 +252,11 @@ form#dragDrop button {
   transition: all .2s ease;
   outline: none;
 }
-form#dragDrop button:hover {
+#dragDrop button:hover {
   background: #cbcbcb;
   color: #808080;
 }
-form#dragDrop button:active {
+#dragDrop button:active {
   border: 0;
 }
 
