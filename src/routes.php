@@ -87,3 +87,12 @@ $app->get('/record-preview', function($request, $response, $args) {
 
 	return $this->view->render($response, 'record-preview.html.twig', $page->getPageInfo());
 });
+
+$app->get('/upload', function ($request, $response, $args) {
+
+	// Instantiate Page object
+	$page = new \tna\Page();
+
+	return $this->view->render($response, 'upload.html.twig', $page->getPageInfo());
+
+})->setName('upload');

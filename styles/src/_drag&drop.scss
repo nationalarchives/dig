@@ -1,0 +1,46 @@
+#dragDrop {
+  width: 100%;
+  height: 281px;
+  border: 2px dashed #ddd;
+  p{
+    width: 100%;
+    text-align: center;
+    line-height: 170px;
+    color: #9d9d9d;
+  }
+  span.glyphicon {
+    text-align: center;
+    font-size: 6em;
+    color: #9d9d9d;
+    width: 100%;
+    top: .5em;
+  }
+  input{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 285px;
+    outline: none;
+    opacity: 0;
+  }
+  button{
+    margin: 0;
+    color: #fff;
+    background: #999999;
+    border: none;
+    width: 100%;
+    height: 35px;
+    margin-top: -20px;
+    border-bottom: 4px solid #a3a39a;
+    transition: all .2s ease;
+    outline: none;
+  }
+  button:hover{
+    background: #cbcbcb;
+    color: #808080;
+  }
+  button:active{
+    border:0;
+  }
+}
