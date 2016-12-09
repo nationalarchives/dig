@@ -1,0 +1,118 @@
+<html lang="en">
+{% block head %}
+    <head>
+
+        <title>{{ page_title }} | {{ app_name }}</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+        <!-- Custom styles for the prototype -->
+        <link href="/styles/dist/main.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+{% endblock %}
+
+<body>
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title">{{ app_name }}</h1>
+                        </div>
+                        <div class="modal-body">
+                            <p>This is a <strong>prototype</strong> of a standardised access point to the Digital
+                                Records Infrastructure (DRI). It is limited in scope to <strong>the validation and
+                                    upload of born digital records</strong> (commonly referred to as 'Gateway 3').</p>
+                            <h3>Steps represented in the prototype</h3>
+                            <ul>
+                                <li>The <a href="/">aggregate transfers</a> page shows current and past
+                                    transfers for a department as well as the 'persistent' applications features, including:
+                                    <ul>
+                                        <li>search</li>
+                                        <li>a notification panel</li>
+                                        <li>a guidance section</li>
+                                        <li>the message center</li>
+                                    </ul>
+                                </li>
+                                <li>Clicking on a transfer shows the <a href="/transfer">individual transfer page</a>
+                                    with available information and
+                                    allows users to:
+                                    <ul>
+                                        <li><a href="/register-collection">Edit information about collection</a> that
+                                            has been
+                                            collected in previous steps
+                                        </li>
+                                        <li>Provide collection metadata
+                                            <ul>
+                                                <li><strong>Successfully</strong> - currently simulated by uploading
+                                                    <em>any
+                                                        file</em></li>
+                                                <li><strong>Unsuccessfully</strong> - currently simulated by clicking
+                                                    'upload'
+                                                    without having selected a file
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>Having successfully uploaded metadata users:
+                                    <ul>
+                                        <li>are presented with a confirmation message and summary of the uploaded
+                                            metadata
+                                        </li>
+                                        <li>can click on a file type to see a <a href="/search-results">search
+                                                results</a> page of records filtered by type and transfer. From the search results page users can:
+
+                                                    <ul>
+                                                        <li>click on an item to see a representation of the record
+                                                            metadata as it would appear on
+                                                            Discovery
+                                                        </li>
+                                                    </ul>
+
+                                        </li>
+                                        <li>can view suggested transfer options (the prototype suggests upload). At this point they can:
+                                            <ul>
+                                                <li>Begin the <a href="/upload">digital transfer (upload)</a> process or, by
+                                                    clicking the 'Hard Disk Drive' link
+                                                </li>
+                                                <li>Begin the process of <a href="/request-hard-disk-drive">requesting a hard
+                                                        disk drive</a></li>
+                                            </ul></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="/" type="button" class="btn btn-primary">Continue to prototype</a>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </div>
+    </div>
+</main>
+
+<script src="/bower_components/jquery/dist/jquzzery.min.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/script/prototype-scripts.js"></script>
+<script>
+    // Basic logging for development
+    (function () {
+        var page_data = JSON.parse('{{ properties_as_json | raw }}');
+        console && console.log(page_data);
+    })();
+</script>
+</body>
+</html>

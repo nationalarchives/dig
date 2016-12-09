@@ -91,3 +91,10 @@ $app->get('/upload', function ($request, $response, $args) {
 	return $this->view->render($response, 'upload.html.twig', $page->getPageInfo());
 
 })->setName('upload');
+
+$app->get('/introduction', function($request, $response, $args){
+
+	$page = new \tna\Page(['page_title' => 'Introduction']);
+    return $this->view->render($response, 'introduction.html.twig', $page->getPageInfo());
+
+})->setName('intro');
