@@ -2,18 +2,37 @@ a {
   color: #0f0f0f;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: none;
   color: #0f0f0f;
- .panel-body {
-   background: #efefef;
- }
+  .panel-body {
+    background: #efefef;
+  }
 }
+
 .panel-body {
-  .glyphicon{
+  .glyphicon {
     font-size: 3em;
   }
 }
+
 .panel-title {
   display: inline-block;
+}
+
+.individual-transfer {
+  .panel-heading {
+    position: relative;
+    padding-right: 7em;
+    h3 {
+      line-height: 140%;
+    }
+
+    span.label {
+      position: absolute;
+      top: $padding-unit-large;
+      right: $padding-unit-large;
+    }
+  }
 }

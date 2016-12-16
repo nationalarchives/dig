@@ -8,10 +8,6 @@ h1, h2, h3, h4, h5 {
   font-family: 'Bitter', serif;
 }
 
-main a {
-  text-decoration: underline !important;
-}
-
 /*
 
 -------------------------
@@ -215,6 +211,19 @@ a:hover .panel-body {
 
 .panel-title {
   display: inline-block;
+}
+
+.individual-transfer .panel-heading {
+  position: relative;
+  padding-right: 7em;
+}
+.individual-transfer .panel-heading h3 {
+  line-height: 140%;
+}
+.individual-transfer .panel-heading span.label {
+  position: absolute;
+  top: 1em;
+  right: 1em;
 }
 
 #dragDrop {
