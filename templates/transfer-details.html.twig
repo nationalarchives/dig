@@ -17,14 +17,18 @@
             {% endif %}
 
             {% if show_summary %}
+                {% if show_summary %}
+                    <div class="cta-button">
+                        <a href="#metadata-upload" class="btn btn-lg btn-block btn-info">Happy with your upload? Delete or Upload metadata again.</a>
+                    </div>
+                {% endif %}
                 {{ include('transfer-summary.html.twig') }}
             {% endif %}
-
             <div class="panel panel-default">
                 <div class="panel-heading">Transfer registration details</div>
                 <div class="panel-body">The details of the collection within this transfer can be viewed and amended on the <a href="/register-collection">collection registration</a> page</div>
             </div>
-            <form action="/metadata-upload" method="post">
+            <form action="/metadata-upload" method="post" id="metadata-upload">
                 <div class="panel panel-default">
                     <div class="panel-heading">Select metadata for transfer</div>
                     <div class="panel-body">
