@@ -40,3 +40,15 @@ a:hover {
 .cta-button {
   padding-bottom: 1em;
 }
+
+.panel {
+  .list-group-item:hover {
+    background-color: #f5f5f5;
+    a {
+      display: block;
+    }
+  }
+  .badge {
+    float: right;
+  }
+}
