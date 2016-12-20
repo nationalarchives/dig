@@ -8,6 +8,10 @@ h1, h2, h3, h4, h5 {
   font-family: 'Bitter', serif;
 }
 
+.success {
+  background-color: #eeffe7;
+}
+
 /*
 
 -------------------------
@@ -238,6 +242,16 @@ a:hover .panel-body {
 }
 .panel .badge {
   float: right;
+}
+
+.status span.glyphicon-ok {
+  border-radius: 100% !important;
+  -moz-border-radius: 100% !important;
+  -webkit-border-radius: 100% !important;
+  color: #3c763d;
+  background-color: #dff0d8;
+  border: 1px solid #3c763d;
+  padding: .1em;
 }
 
 #dragDrop {
