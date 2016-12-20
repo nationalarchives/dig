@@ -258,6 +258,34 @@ a:hover .panel-body {
   padding: .1em;
 }
 
+#transfer_collection .panel-heading {
+  padding: .5em;
+}
+#transfer_collection .panel-title > a {
+  display: block;
+  padding: 0.4em 0.6em;
+  font-weight: bold;
+}
+
+#transfer_collection .panel-title > a.accordion-toggle::before, #transfer_collection a[data-toggle="collapse"]::before {
+  content: "\e113";
+  float: left;
+  font-family: 'Glyphicons Halflings';
+  margin-right: 1em;
+}
+
+#transfer_collection .panel-title > a.accordion-toggle.collapsed::before, #transfer_collection a.collapsed[data-toggle="collapse"]::before {
+  content: "\e114";
+}
+
+#transfer_collection .col-md-10 a {
+  text-decoration: underline;
+}
+
+.table tr td:first-of-type {
+  font-weight: bold;
+}
+
 #dragDrop {
   width: 100%;
   height: 281px;

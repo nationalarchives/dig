@@ -6,9 +6,7 @@
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <div class="row">
             {% include 'status-bar.html.twig' %}
-            <h1>Transfer name</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus
-                laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+            <h1>BT95: Board of Trade: Companies Registration Office: Classified Index ('Classi Sheets') to Files of Dissolved Exempt Private Companies Transfer status.</h1>
 
             {% block flash_message %}
             {% endblock %}
@@ -25,9 +23,92 @@
                 {% endif %}
                 {{ include('transfer-summary.html.twig') }}
             {% endif %}
-            <div class="panel panel-default">
-                <div class="panel-heading">Transfer registration details</div>
-                <div class="panel-body">The details of the collection within this transfer can be viewed and amended on the <a href="/register-collection">collection registration</a> page</div>
+            <div class="panel-group" id="transfer_collection" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Collection you're transferring
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <td>Collection identifier :</td>
+                                            <td>COMPH</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Collection type :</td>
+                                            <td>Born digital</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Security tag in Preservica :</td>
+                                            <td>BornDigital</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Creating body :</td>
+                                            <td>Board of Trade, Companies Registration Office</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Transferring body :</td>
+                                            <td>Companies House</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Batch identifier :</td>
+                                            <td>BT95Y15FB001</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Series identifier :</td>
+                                            <td>BT95</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Transfer identifier :</td>
+                                            <td>COMPHY15</td>
+                                        </tr>
+                                        <tr>
+                                            <td>File deliverable as unit :</td>
+                                            <td>Yes</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Metadata schema :</td>
+                                            <td>metadata_v13_ BT95Y15FB000.csvs</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Closure schema :</td>
+                                            <td>closure_v3.csvs</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Filepath in CSV metadata :</td>
+                                            <td>file:///T:/WORK/BT95Y15FB001/BT_95/</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Whitelist addition :</td>
+                                            <td>x-fmt:280</td>
+                                        </tr>
+                                        <tr>
+                                            <td>File exceptions :</td>
+                                            <td>No exceptions</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discovery parent ID :</td>
+                                            <td>C15626553</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-2">
+                                <button id="show_all" class="btn btn-default" role="button">Show more</button>
+                            </div>
+                            <div class="col-md-10">
+                                The details of the collection within this transfer can be viewed and amended on the <a href="/register-collection">collection registration</a> page.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <form action="/metadata-upload" method="post" id="metadata-upload">
                 <div class="panel panel-default">

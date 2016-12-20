@@ -15,3 +15,16 @@
     }).click();
 
 })(jQuery);
+
+(function($){
+    var rows= $('table tr:nth-of-type(5)');
+    $(rows).nextAll().hide();
+    $('#show_all').click(function() {
+        $(rows).nextAll().fadeToggle( "fast" );
+        if ($.trim($(this).text()) === 'Show less') {
+            $(this).text('Show more');
+        } else {
+            $(this).text('Show less');
+        }
+    });
+})(jQuery);
