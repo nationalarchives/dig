@@ -1,36 +1,50 @@
 {% block summary %}
     <div class="panel panel-default">
-        <div class="panel-heading">Metadata Summary</div>
+        <div class="panel-heading">Summary of uploaded metadata</div>
         <div class="panel-body">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
             <hr>
-            <div class="col-md-6">
-                <img src="../images/bar-chart-7-xxl.png" class="img-responsive center-block">
-                <hr>
-                <p>
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over
-                </p>
-                <p>
-                    Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur
-                </p>
-                <p>
-                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero
-                </p>
-            </div>
-            <div class="col-md-6">
-                <img src="../images/pie-chart-xxl.png" class="img-responsive center-block">
+            <div class="col-md-12">
+                <div id="piechart"></div>
                 <hr>
                 <div class="panel panel-default">
                     <!-- Default panel contents -->
-                    <div class="panel-heading">Total number of records <span class="badge">102</span></div>
+                    <div class="panel-heading">Total number of records <span class="badge">1,234</span></div>
                     <!-- List group -->
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="/search-results">Open records <span class="badge">34</span></a></li>
-                        <li class="list-group-item"><a href="/search-results">Closed records <span class="badge">34</span></a></li>
-                        <li class="list-group-item"><a href="/search-results">Closed records with open description<span class="badge">34</span></a></li>
+                        <li class="list-group-item"><a href="/search-results">Open records <span
+                                        class="badge">824</span></a></li>
+                        <li class="list-group-item"><a href="/search-results">Closed records with closed
+                                description<span class="badge">310</span></a></li>
+                        <li class="list-group-item"><a href="/search-results">Closed records with open description<span
+                                        class="badge">105</span></a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages': ['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Uploaded records'],
+                ['Open records', 824],
+                ['Closed records with closed description', 310],
+                ['Closed records with open description', 105]
+            ]);
+
+            var options = {
+                title: 'Records described in CSV metadata'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
 {% endblock %}
