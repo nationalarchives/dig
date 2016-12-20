@@ -36,5 +36,4 @@ class Page
 
         return $properties_as_array;
     }
-
 }
