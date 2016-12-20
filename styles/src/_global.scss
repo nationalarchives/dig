@@ -1,7 +1,14 @@
 * {
-  border-radius: 0!important;
-  box-shadow: none!important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  a {
+    text-decoration: underline;
+  }
+
 }
 
 h1, h2, h3, h4, h5 {

@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="row">
+        <h1>{{ page_title }}</h1>
+        <table class="table table-condensed">
+            <tr>
+                <th>File names in metadata but not in DROID report</th>
+                <th>File names in DROID report but not in metadata</th>
+            </tr>
+            <tr class="danger">
+                <td>4_009_56.pdf</td>
+                <td></td>
+            </tr>
+            <tr class="danger">
+                <td></td>
+                <td>4_009_56.pdf</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}
