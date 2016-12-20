@@ -40,7 +40,7 @@ $app->post('/metadata-upload', function ($request, $response, $args) {
     } else {
         $page = new \tna\Page([
             'page_title' => 'Metadata upload failed',
-            'flash_message' => 'Metadata empty',
+            'flash_message' => 'Please choose a file to upload',
             'flash_message_class' => 'danger'
         ]);
         return $this->view->render($response, 'message.html.twig', $page->getPageInfo());
