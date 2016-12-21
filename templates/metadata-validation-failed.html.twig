@@ -1,0 +1,20 @@
+{% extends 'layout-for-placeholder.html.twig' %}
+
+{% block content %}
+    <div class="modal-header">
+        <h2 class="modal-title">Placeholder: Metadata upload fails to validate against schema</h2>
+    </div>
+    <div class="modal-body">
+        <p>Step is needed here to represent what happens when a user's upload does not validate against the schema.</p>
+        <p>Because validation against the schema is required <strong>before reviewing submitted metadata</strong> users will be:</p>
+        <ul>
+            <li>Presented with a description of the problem</li>
+            <li>Asked to upload the data again</li>
+        </ul>
+        <p>Intention is to <mark>use a similar pattern to that being created for MYC</mark></p>
+    </div>
+    <div class="modal-footer">
+        <a href="/metadata-upload?upload=true" type="button" class="btn btn-primary">Continue to success page</a>
+    </div>
+
+{% endblock %}
