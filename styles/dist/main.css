@@ -290,6 +290,10 @@ a:hover .panel-body {
   font-weight: bold;
 }
 
+.search-results a {
+  text-decoration: none;
+}
+
 #dragDrop {
   width: 100%;
   height: 281px;
