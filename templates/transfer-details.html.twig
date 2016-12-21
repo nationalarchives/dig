@@ -21,7 +21,7 @@
                 {{ include('transfer-summary.html.twig') }}
             {% endif %}
 
-
+            {% if uploaded == false %}
             <form action="/metadata-upload" method="post" id="metadata-upload">
                 <div class="panel panel-default">
                     <div class="panel-heading">Select metadata for upload</div>
@@ -36,6 +36,7 @@
                     </div>
                 </div>
             </form>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

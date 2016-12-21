@@ -49,11 +49,10 @@ $app->post('/metadata-upload', function ($request, $response, $args) {
 $app->get('/submitted-ok', function ($request, $response, $args) {
     $page = new \tna\Page([
         'page_title' => 'Metadata uploaded successfully',
-        'flash_message' => 'Metadata uploaded successfully. <a href="/begin-transfer" >View recommended transfer options</a>',
-        'flash_message_class' => 'success',
-        'show_summary' => true
+        'show_summary' => true,
+        'uploaded' => true
     ]);
-    return $this->view->render($response, 'message.html.twig', $page->getPageInfo());
+    return $this->view->render($response, 'transfer-details.html.twig', $page->getPageInfo());
 })->setName('submitted-ok');
 
 $app->get('/search-results', function ($request, $response, $args) {

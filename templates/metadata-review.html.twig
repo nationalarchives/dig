@@ -5,6 +5,7 @@
 {% block content %}
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <div class="row">
+            {% include 'status-bar.html.twig' %}
             <h1>Review uploaded metadata</h1>
             <p>This page provides an opportunity to:</p>
             <ul>
@@ -31,7 +32,8 @@
                 </tr>
                 <tr class="danger">
                     <th>File names and checksums</th>
-                    <td><span class="glyphicon glyphicon-remove"></span> <a href="/diff">8 file names</a> differ between the DROID report
+                    <td><span class="glyphicon glyphicon-remove"></span> <a href="/diff">8 file names</a> differ between
+                        the DROID report
                         and metadata CSV
                     </td>
                 </tr>
@@ -41,7 +43,8 @@
                 </tr>
                 <tr class="danger">
                     <th>Closure status</th>
-                    <td><span class="glyphicon glyphicon-remove"></span> <a href="/diff">14 closure statuses</a> differ between the DROID
+                    <td><span class="glyphicon glyphicon-remove"></span> <a href="/diff">14 closure statuses</a> differ
+                        between the DROID
                         report and metadata CSV
                     </td>
                 </tr>
@@ -54,11 +57,11 @@
                     <td><span class="glyphicon glyphicon-remove"></span> All modification dates match</td>
                 </tr>
             </table>
-            {{ include('transfer-summary.html.twig') }}
+            {% include 'transfer-summary.html.twig' %}
 
             <div>
-                <a href="/submitted-ok" class="btn btn-default">OK, continue</a>
-                <a href="/" class="btn btn-default">Go back and resubmit metadata</a>
+                <a href="/" class="btn btn-default">Delete and resubmit metadata</a>
+                <a href="/submitted-ok" class="btn btn-default">Save and proceed</a>
             </div>
         </div>
     </div>
