@@ -30,68 +30,85 @@
                             <h1 class="modal-title">{{ app_name }}</h1>
                         </div>
                         <div class="modal-body">
-                            <p>This is a <strong>prototype</strong> of a standardised access point to the Digital
-                                Records Infrastructure (DRI). It is limited in scope to <strong>the validation and
-                                    upload of born digital records</strong> (commonly referred to as 'Gateway 3').</p>
-                            <h3>Steps represented in the prototype</h3>
+                            <p>This is a prototype of a standardised access point to the Digital Records Infrastructure (DRI). It covers the validation and upload of born digital records only (commonly referred to as 'Gateway 3').</p>
+                            <h3>What you can test</h3>
+                            <p>The prototype’s opening page shows a mock list of current and past Home Office collections, as well as a number of currently inoperative features:</p>
+                            {#<ul>#}
+                                {#<li>The <a href="/">aggregate transfers</a> page shows current and past#}
+                                    {#transfers for a department as well as the 'persistent' applications features, including:#}
+                                    {#<ul>#}
+                                        {#<li>search</li>#}
+                                        {#<li>a notification panel</li>#}
+                                        {#<li>a guidance section</li>#}
+                                        {#<li>the message center</li>#}
+                                    {#</ul>#}
+                                {#</li>#}
+                                {#<li>Clicking on a transfer shows the <a href="/transfer">individual transfer page</a>#}
+                                    {#with available information and#}
+                                    {#allows users to:#}
+                                    {#<ul>#}
+                                        {#<li><a href="/register-collection">Edit information about collection</a> that#}
+                                            {#has been#}
+                                            {#collected in previous steps#}
+                                        {#</li>#}
+                                        {#<li>Provide collection metadata#}
+                                            {#<ul>#}
+                                                {#<li><strong>Successfully</strong> - currently simulated by uploading#}
+                                                    {#<em>any#}
+                                                        {#file</em></li>#}
+                                                {#<li><strong>Unsuccessfully</strong> - currently simulated by clicking#}
+                                                    {#'upload'#}
+                                                    {#without having selected a file#}
+                                                {#</li>#}
+                                            {#</ul>#}
+                                        {#</li>#}
+                                    {#</ul>#}
+                                {#</li>#}
+
+                                {#<li>Having successfully uploaded metadata users:#}
+                                    {#<ul>#}
+                                        {#<li>are presented with a confirmation message and summary of the uploaded#}
+                                            {#metadata#}
+                                        {#</li>#}
+                                        {#<li>can click on a file type to see a <a href="/search-results">search#}
+                                                {#results</a> page of records filtered by type and transfer. From the search results page users can:#}
+
+                                                    {#<ul>#}
+                                                        {#<li>click on an item to see a representation of the record#}
+                                                            {#metadata as it would appear on#}
+                                                            {#Discovery#}
+                                                        {#</li>#}
+                                                    {#</ul>#}
+
+                                        {#</li>#}
+                                        {#<li>can view suggested transfer options (the prototype suggests upload). At this point they can:#}
+                                            {#<ul>#}
+                                                {#<li>Begin the <a href="/upload">digital transfer (upload)</a> process or, by#}
+                                                    {#clicking the 'Hard Disk Drive' link#}
+                                                {#</li>#}
+                                                {#<li>Begin the process of <a href="/request-hard-disk-drive">requesting a hard#}
+                                                        {#disk drive</a></li>#}
+                                            {#</ul></li>#}
+                                    {#</ul>#}
+                                {#</li>#}
+                            {#</ul>#}
                             <ul>
-                                <li>The <a href="/">aggregate transfers</a> page shows current and past
-                                    transfers for a department as well as the 'persistent' applications features, including:
-                                    <ul>
-                                        <li>search</li>
-                                        <li>a notification panel</li>
-                                        <li>a guidance section</li>
-                                        <li>the message center</li>
-                                    </ul>
-                                </li>
-                                <li>Clicking on a transfer shows the <a href="/transfer">individual transfer page</a>
-                                    with available information and
-                                    allows users to:
-                                    <ul>
-                                        <li><a href="/register-collection">Edit information about collection</a> that
-                                            has been
-                                            collected in previous steps
-                                        </li>
-                                        <li>Provide collection metadata
-                                            <ul>
-                                                <li><strong>Successfully</strong> - currently simulated by uploading
-                                                    <em>any
-                                                        file</em></li>
-                                                <li><strong>Unsuccessfully</strong> - currently simulated by clicking
-                                                    'upload'
-                                                    without having selected a file
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>Having successfully uploaded metadata users:
-                                    <ul>
-                                        <li>are presented with a confirmation message and summary of the uploaded
-                                            metadata
-                                        </li>
-                                        <li>can click on a file type to see a <a href="/search-results">search
-                                                results</a> page of records filtered by type and transfer. From the search results page users can:
-
-                                                    <ul>
-                                                        <li>click on an item to see a representation of the record
-                                                            metadata as it would appear on
-                                                            Discovery
-                                                        </li>
-                                                    </ul>
-
-                                        </li>
-                                        <li>can view suggested transfer options (the prototype suggests upload). At this point they can:
-                                            <ul>
-                                                <li>Begin the <a href="/upload">digital transfer (upload)</a> process or, by
-                                                    clicking the 'Hard Disk Drive' link
-                                                </li>
-                                                <li>Begin the process of <a href="/request-hard-disk-drive">requesting a hard
-                                                        disk drive</a></li>
-                                            </ul></li>
-                                    </ul>
-                                </li>
+                                <li>search</li>
+                                <li>notification panel</li>
+                                <li>guidance section</li>
+                                <li>message centre</li>
+                            </ul>
+                            <p>Click on a collection to show an individual collection page, where you can test how to:</p>
+                            <ul>
+                                <li>Edit information collected in previous steps</li>
+                                <li>Provide metadata either successfully (by uploading any file) or unsuccessfully (by clicking 'upload' without having selected a file)</li>
+                            </ul>
+                            <p>
+                                If you successfully upload metadata, you will see a confirmation message and summary. You can then either:
+                            </p>
+                            <ul>
+                                <li>view and test transfer options (digital or hard disk drive)</li>
+                                <li>click on an item to see a representation of the record metadata as it would appear on Discovery, The National Archives’ catalogue.</li>
                             </ul>
                         </div>
                         <div class="modal-footer">

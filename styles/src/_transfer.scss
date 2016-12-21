@@ -2,15 +2,102 @@ a {
   color: #0f0f0f;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: none;
   color: #0f0f0f;
- .panel-body {
-   background: #efefef;
- }
+  .panel-body {
+    background: #efefef;
+  }
 }
+
 .panel-body {
-  .glyphicon{
+  .glyphicon {
     font-size: 3em;
+  }
+}
+
+.panel-title {
+  display: inline-block;
+}
+
+.individual-transfer {
+  .panel-heading {
+    position: relative;
+    padding-right: 7em;
+    h3 {
+      line-height: 140%;
+    }
+
+    span.label {
+      position: absolute;
+      top: $padding-unit-large;
+      right: $padding-unit-large;
+    }
+  }
+}
+
+.cta-button {
+  padding-bottom: 1em;
+}
+
+.panel {
+  .list-group-item:hover {
+    background-color: #f5f5f5;
+    a {
+      display: block;
+    }
+  }
+  .badge {
+    float: right;
+  }
+}
+.status {
+  span.glyphicon-ok {
+    border-radius: 100%!important;
+    -moz-border-radius: 100%!important;
+    -webkit-border-radius: 100%!important;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border: 1px solid #3c763d;
+    padding: .1em;
+  }
+}
+
+#transfer_collection {
+  .panel-heading {
+    padding: .5em;
+  }
+  .panel-title > a {
+    display: block;
+    padding: 0.4em 0.6em;
+    font-weight: bold;
+  }
+}
+
+#transfer_collection .panel-title > a.accordion-toggle::before, #transfer_collection a[data-toggle="collapse"]::before  {
+  content:"\e113";
+  float: left;
+  font-family: 'Glyphicons Halflings';
+  margin-right :1em;
+}
+#transfer_collection .panel-title > a.accordion-toggle.collapsed::before, #transfer_collection a.collapsed[data-toggle="collapse"]::before  {
+  content:"\e114";
+}
+
+#transfer_collection {
+  .col-md-10 {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.table {
+  tr{
+    td:first-of-type {
+      font-weight: bold;
+    }
   }
 }

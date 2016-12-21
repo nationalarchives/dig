@@ -3,35 +3,36 @@
 {% block title %} app_name {% endblock %}
 
 {% block content %}
-<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-    <h1 class="page-header">{{ department_name }} transfers</h1>
-    <div class="row">
-        <div class="col-md-3">
-            <p class="navbar-left">Filter by</p>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h1 class="page-header">{{ department_name }} collections</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <h4>Filter by</h4>
+            </div>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option>Transfer Status</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option>Transfer type</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option>Year</option>
+                </select>
+            </div>
         </div>
-        <div class="col-md-3">
-            <select class="form-control">
-                <option>Transfer type</option>
-            </select>
-        </div>
-        <div class="col-md-3">
-            <select class="form-control">
-                <option>Year</option>
-            </select>
-        </div>
-        <div class="col-md-3">
-            <select class="form-control">
-                <option>Transfer status</option>
-            </select>
-        </div>
-    </div>
-    <div class="results">
-        {% for year in range(2014,2017) %}
-            <h3>{{ year }}</h3>
-            {% for i in range(0,3) %}
-                {% include 'individual-transfer.html.twig' %}
+        <hr>
+        <div class="results">
+            {% for collection in range(0,2) %}
+                <h3>COMPH: Board of Trade: Companies Registration Office: Files of Dissolved Companies</h3>
+                {% for i in range(0,1) %}
+                    {% include 'individual-transfer.html.twig' %}
+                {% endfor %}
             {% endfor %}
-        {% endfor %}
+        </div>
     </div>
-</div>
 {% endblock %}

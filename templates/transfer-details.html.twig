@@ -5,9 +5,8 @@
 {% block content %}
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <div class="row">
-            <h1>Transfer name</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus
-                laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+            {% include 'status-bar.html.twig' %}
+            <h1>BT95: Board of Trade: Companies Registration Office: Classified Index ('Classi Sheets') to Files of Dissolved Exempt Private Companies Transfer status.</h1>
 
             {% block flash_message %}
             {% endblock %}
@@ -16,17 +15,16 @@
                 {{ include('begin-transfer.html.twig') }}
             {% endif %}
 
+            {{ include('transfer-registration-details.html.twig') }}
+
             {% if show_summary %}
                 {{ include('transfer-summary.html.twig') }}
             {% endif %}
 
-            <div class="panel panel-default">
-                <div class="panel-heading">Transfer registration details</div>
-                <div class="panel-body">The details of the collection within this transfer can be viewed and amended on the <a href="/register-collection">collection registration</a> page</div>
-            </div>
-            <form action="/metadata-upload" method="post">
+            {% if uploaded == false %}
+            <form action="/metadata-upload" method="post" id="metadata-upload">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Select metadata for transfer</div>
+                    <div class="panel-heading">Select metadata for upload</div>
                     <div class="panel-body">
                         <div class="input-group">
                             <input data-show-preview="true" type="file" class="form-control" placeholder="Upload CSV"
@@ -38,6 +36,7 @@
                     </div>
                 </div>
             </form>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

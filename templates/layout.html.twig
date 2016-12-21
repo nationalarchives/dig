@@ -43,9 +43,12 @@
 <script>
     // Basic logging for development
     (function () {
-        var page_data = JSON.parse('{{ properties_as_json | raw }}');
+        var raw_data = '{{ properties_as_json | raw }}';
+        var page_data = JSON.parse(raw_data);
         console && console.log(page_data);
     })();
 </script>
+{% block scripts %}
+{% endblock %}
 </body>
 </html>

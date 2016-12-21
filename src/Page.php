@@ -11,6 +11,7 @@ class Page
     public $flash_message_class = '';
     public $show_summary = false;
     public $begin_transfer = false;
+    public $uploaded = false;
 
     /**
      * Page constructor.
@@ -36,5 +37,4 @@ class Page
 
         return $properties_as_array;
     }
-
 }

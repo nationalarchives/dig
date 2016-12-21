@@ -4,12 +4,20 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+main a {
+  text-decoration: underline;
+}
+
 h1, h2, h3, h4, h5 {
   font-family: 'Bitter', serif;
 }
 
 main a {
-  text-decoration: underline !important;
+  text-decoration: underline;
+}
+
+.success {
+  background-color: #eeffe7;
 }
 
 /*
@@ -211,6 +219,75 @@ a:hover .panel-body {
 
 .panel-body .glyphicon {
   font-size: 3em;
+}
+
+.panel-title {
+  display: inline-block;
+}
+
+.individual-transfer .panel-heading {
+  position: relative;
+  padding-right: 7em;
+}
+.individual-transfer .panel-heading h3 {
+  line-height: 140%;
+}
+.individual-transfer .panel-heading span.label {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.cta-button {
+  padding-bottom: 1em;
+}
+
+.panel .list-group-item:hover {
+  background-color: #f5f5f5;
+}
+.panel .list-group-item:hover a {
+  display: block;
+}
+.panel .badge {
+  float: right;
+}
+
+.status span.glyphicon-ok {
+  border-radius: 100% !important;
+  -moz-border-radius: 100% !important;
+  -webkit-border-radius: 100% !important;
+  color: #3c763d;
+  background-color: #dff0d8;
+  border: 1px solid #3c763d;
+  padding: .1em;
+}
+
+#transfer_collection .panel-heading {
+  padding: .5em;
+}
+#transfer_collection .panel-title > a {
+  display: block;
+  padding: 0.4em 0.6em;
+  font-weight: bold;
+}
+
+#transfer_collection .panel-title > a.accordion-toggle::before, #transfer_collection a[data-toggle="collapse"]::before {
+  content: "\e113";
+  float: left;
+  font-family: 'Glyphicons Halflings';
+  margin-right: 1em;
+}
+
+#transfer_collection .panel-title > a.accordion-toggle.collapsed::before, #transfer_collection a.collapsed[data-toggle="collapse"]::before {
+  content: "\e114";
+}
+
+#transfer_collection .col-md-10 a {
+  text-decoration: underline;
+}
+
+.table tr td:first-of-type {
+  font-weight: bold;
 }
 
 #dragDrop {
